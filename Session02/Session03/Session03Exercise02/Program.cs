@@ -100,6 +100,11 @@ namespace Session03Exercise02
 
             foreach (var number in array)
             {
+                if(number == null)
+                {
+                    Console.WriteLine("The value is null");
+                    continue;
+                }
                 Console.WriteLine("Värdet är " + number);
                 testValue = number;
 
