@@ -18,14 +18,36 @@ namespace Övningar_lektion_3
             }
             */
             // Övning 2
-            //int schack = 12;
-            for (int i = 0; i < 12; i += 2)
+            for (int i = 1; i < 65; i++)
             {
-                int test = i %= 2;
-                if(test == 1)
-                Console.WriteLine('░');
-                else
-                Console.WriteLine('▓');
+                int test = i % 2;
+                int lineBreak = i % 8;
+                int lineSwitch = 1;
+
+                if (lineSwitch % 2 == 1)
+                {
+                    if (lineBreak == 1)
+                    {
+                        Console.Write("\n");
+                        lineSwitch++;
+                    }
+                    if (test == 1)
+                        Console.Write('▓');
+                    else
+                        Console.Write('░');
+                }
+                else if (lineSwitch % 2 == 0)
+                {
+                    if (lineBreak == 1)
+                    {
+                    Console.Write("\n");
+                    lineSwitch++;
+                    }
+                    if (test == 0)
+                        Console.Write('▓');
+                    else
+                        Console.Write('░');
+                }
             }
         }
     }
