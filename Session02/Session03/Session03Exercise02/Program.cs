@@ -12,7 +12,7 @@ namespace Session03Exercise02
             Console.WriteLine();
             // Alternativt var inputArray = input.Split(new [] { ',' }, StringSplitOptions.RemoveEmptyEntries);
             var inputArray = input.Split(",", StringSplitOptions.RemoveEmptyEntries);
-            IFormatProvider formatProvider = 
+            
             #region min grej
             /*
             int total = 0;
@@ -66,9 +66,8 @@ namespace Session03Exercise02
             #endregion
             for (int i = 0; i < inputArray.Length; i++)
             {
-                #region Bortkommenterat
-                
                 NumberStyles numberStyle = NumberStyles.Integer | NumberStyles.Float;
+                IFormatProvider formatProvider = CultureInfo.InvariantCulture;
                 bool parsed = double.TryParse(inputArray[i], numberStyle, formatProvider, out double parsedValue);
 
                 if (parsed == true)
@@ -80,8 +79,6 @@ namespace Session03Exercise02
                     Console.WriteLine("!");
                     array[i] = null;
                 }
-                
-                #endregion
                 #region try catch
                 /*try
                 {
@@ -101,12 +98,11 @@ namespace Session03Exercise02
             double? minValue = array[0];
             double? testValue;
 
-           
             foreach (var number in array)
             {
                 Console.WriteLine("Värdet är " + number);
-
                 testValue = number;
+
                 if (maxValue < testValue)
                 {
                     maxValue = testValue;
