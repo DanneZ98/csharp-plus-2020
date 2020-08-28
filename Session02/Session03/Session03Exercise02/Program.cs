@@ -76,7 +76,6 @@ namespace Session03Exercise02
                 }
                 else
                 {
-                    Console.WriteLine("!");
                     array[i] = null;
                 }
                 #region try catch
@@ -124,9 +123,9 @@ namespace Session03Exercise02
             Console.WriteLine();
             Console.WriteLine("Medelvärdet är: " + total / loops);
             Console.WriteLine();
-            Console.WriteLine("Max värdet är: " + maxValue);
+            Console.WriteLine("Det högsta värdet är: " + maxValue);
             Console.WriteLine();
-            Console.WriteLine("Min värdet är: " + minValue);
+            Console.WriteLine("Det minsta värdet är: " + minValue);
         }
     }
 }
